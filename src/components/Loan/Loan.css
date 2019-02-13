@@ -3,19 +3,19 @@
 }
 .card {
   /* width: 400px; */
-  border: 1px solid #ef9a9a;
+  border: 1px solid #808080;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 .card-header {
-  color: #d32f2f;
+  color: #000;
   text-align: left;
   font-size: 16px;
   font-weight: 600;
-  border-bottom: 1px solid #ef9a9a;
-  background-color: #ffebee;
+  border-bottom: 1px solid #808080;
+  background-color: #d3d3d3;
   padding: 5px 10px;
 }
 .card-main {
@@ -24,7 +24,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 10px 0;
-  color: #d32f2f;
+  color: #000;
 }
 .card-detail {
   display: flex;
@@ -32,10 +32,10 @@
   justify-content: flex-start;
   align-items: center;
   padding: 15px 0;
-  color: #d32f2f;
+  color: #000;
 }
 .main-description {
-  color: #d32f2f;
+  color: #000;
   font-size: 12px;
   text-align: center;
 }
@@ -69,7 +69,7 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-color: #d32f2f;
+  background-color: #808080;
   box-shadow: none;
   outline: none;
   opacity: 0;
@@ -88,7 +88,7 @@
   box-sizing: border-box;
   margin: 3px 11px 3px 1px;
   border: solid 2px;
-  border-color: #ef9a9a;
+  border-color: #808080;
   border-radius: 2px;
   width: 18px;
   height: 18px;
@@ -110,16 +110,16 @@
 }
 .pure-material-checkbox > input:checked,
 .pure-material-checkbox > input:indeterminate {
-  background-color: #d32f2f;
+  background-color: #000;
 }
 .pure-material-checkbox > input:checked + span::before,
 .pure-material-checkbox > input:indeterminate + span::before {
-  border-color: #ef9a9a;
-  background-color: #d32f2f;
+  border-color: #808080;
+  background-color: #000;
 }
 .pure-material-checkbox > input:checked + span::after,
 .pure-material-checkbox > input:indeterminate + span::after {
-  border-color: #ef9a9a;
+  border-color: #808080;
 }
 .pure-material-checkbox > input:indeterminate + span::after {
   border-left: none;
@@ -140,11 +140,11 @@
   transition: transform 0s, opacity 0s;
 }
 .pure-material-checkbox > input:active + span::before {
-  border-color: #ef9a9a;
+  border-color: #808080;
 }
 .pure-material-checkbox > input:checked:active + span::before {
   border-color: transparent;
-  background-color: #d32f2f;
+  background-color: #000;
 }
 .pure-material-checkbox > input:disabled {
   opacity: 0;

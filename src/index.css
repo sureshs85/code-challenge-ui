@@ -15,7 +15,7 @@ h3 {
   padding: 10px;
 }
 .border-top {
-  border-top: 1px solid #ef9a9a;
+  border-top: 1px solid #808080;
 }
 .button {
   width: 300px;
@@ -33,12 +33,12 @@ h3 {
 }
 .button5 {
   background-color: white;
-  color: #d32f2f;
-  border: 2px solid #ef9a9a;
+  color: #000;
+  border: 2px solid #808080;
   border-radius: 12px;
 }
 
 .button5:hover {
-  background-color: #ef9a9a;
+  background-color: #808080;
   color: white;
 }
