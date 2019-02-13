@@ -2,11 +2,9 @@ import axios from 'axios';
 
 export function fetAllLoans() {
   return dispatch => {
-    return axios
-      .get('http://localhost:55132/api/loan/getloans')
-      .then(response => {
-        dispatch(setLoans(response.data));
-      });
+    return axios.get('http://localhost:55132/api/loan').then(response => {
+      dispatch(setLoans(response.data));
+    });
   };
 }
 
