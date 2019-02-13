@@ -9,32 +9,41 @@ class LoanList extends React.Component {
   }
   render() {
     return (
-      <div className="wrap">
-        <div>
-          CarryOver / Payout Amount: <b>{this.props.payout}</b>
-        </div>
-        <input
-          type="button"
-          value="Apply for Increased Loan Amounts"
-          disabled={!this.props.payout > 0}
-        />
-        <input
-          type="button"
-          value="Apply for new Loan"
-          disabled={this.props.loanCount >= 3}
-        />
-        {this.props.loans.map((loan, index) => {
-          return (
-            <div key={index}>
-              <Loan
-                loan={loan}
-                handleClick={() =>
-                  this.props.selectedLoan(loan, this.props.loans)
-                }
-              />
+      <div>
+        <div className="flex-wrapper">
+          <div className="flex-container">
+            {this.props.loans.map((loan, index) => {
+              return (
+                <div key={index}>
+                  <Loan
+                    loan={loan}
+                    handleClick={() =>
+                      this.props.selectedLoan(loan, this.props.loans)
+                    }
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex-container">
+            <div>
+              CarryOver / Payout Amount: <b>{this.props.payout}</b>
             </div>
-          );
-        })}
+            <br />
+            <input
+              type="button"
+              className="button button5"
+              value="Apply for Increased Loan Amounts"
+              disabled={!this.props.payout > 0}
+            />
+            <input
+              type="button"
+              className="button button5"
+              value="Apply for new Loan"
+              disabled={this.props.loanCount >= 3}
+            />
+          </div>
+        </div>
       </div>
     );
   }
