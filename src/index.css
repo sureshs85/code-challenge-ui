@@ -10,6 +10,7 @@ body {
 
 p {
   padding: 10px;
+  margin: 0;
 }
 h3 {
   padding: 10px;
@@ -41,4 +42,11 @@ h3 {
 .button5:hover {
   background-color: #808080;
   color: white;
+}
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.wrapper {
+  padding: 10px;
 }

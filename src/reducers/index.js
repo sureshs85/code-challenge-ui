@@ -19,6 +19,9 @@ const mainReducer = (state = defaultState, action) => {
       return true;
     });
     if (action.IsExpanded === true) payout = payout + action.Payout;
+    else {
+      payout = payout - action.Payout;
+    }
     return {
       loans: state.loans.map(loan => {
         if (loan.Id === action.Id)

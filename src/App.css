@@ -44,3 +44,18 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+.loan-count {
+  font-weight: bold;
+  color: green;
+}
+.alert-box {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #808080;
+  max-width: 300px;
+  border-left: 4px solid red;
+  word-wrap: break-word;
+}
+.notification-wrapper {
+  padding: 20px 10px;
+}

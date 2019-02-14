@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actionCreators from '../actions/index';
-import Loan from '../components/Loan/Loan';
+import * as actionCreators from '../../actions/index';
+import Loan from '../../components/Loan/Loan';
 
 class LoanList extends React.Component {
   componentWillMount() {
@@ -12,6 +12,11 @@ class LoanList extends React.Component {
       <div>
         <div className="flex-wrapper">
           <div className="flex-container">
+            <div className="notification-wrapper">
+              <span className="loan-count">
+                You have {this.props.loanCount} Personal Loans
+              </span>
+            </div>
             {this.props.loans.map((loan, index) => {
               return (
                 <div key={index}>
@@ -25,22 +30,38 @@ class LoanList extends React.Component {
               );
             })}
           </div>
-          <div className="flex-container">
+          <div className="flex-container wrapper">
             <div>
-              CarryOver / Payout Amount: <b>{this.props.payout}</b>
+              {this.props.loanCount >= 3 ? (
+                <div className="alert-box">
+                  With 3 or more current Personal Loans, a new Loan application
+                  is not possible in this flow
+                </div>
+              ) : (
+                <span />
+              )}
             </div>
+            <p>
+              CarryOver / Payout Amount: <b>{this.props.payout}</b>
+            </p>
             <br />
             <input
               type="button"
-              className="button button5"
+              className={
+                this.props.payout > 0
+                  ? 'button button5'
+                  : 'button button5 disabled'
+              }
               value="Apply for Increased Loan Amounts"
-              disabled={!this.props.payout > 0}
             />
             <input
               type="button"
-              className="button button5"
+              className={
+                this.props.loanCount >= 3
+                  ? 'button button5 disabled'
+                  : 'button button5'
+              }
               value="Apply for new Loan"
-              disabled={this.props.loanCount >= 3}
             />
           </div>
         </div>
